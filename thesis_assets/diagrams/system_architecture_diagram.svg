@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1080" viewBox="0 0 1680 1080">
+  <defs>
+    <style>
+      .title { font: 700 30px 'Noto Sans SC', Arial, sans-serif; fill: #102a43; }
+      .subtitle { font: 600 19px 'Noto Sans SC', Arial, sans-serif; fill: #1f2937; }
+      .label { font: 600 17px 'Noto Sans SC', Arial, sans-serif; fill: #1f2937; }
+      .text { font: 500 15px 'Noto Sans SC', Arial, sans-serif; fill: #52606d; }
+      .small { font: 500 13px 'Noto Sans SC', Arial, sans-serif; fill: #7b8794; }
+      .group { fill: none; stroke: #d9e2ec; stroke-width: 2; stroke-dasharray: 8 8; rx: 28; ry: 28; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 22; ry: 22; }
+      .client { fill: #eff6ff; stroke: #3b82f6; }
+      .frontend { fill: #ecfeff; stroke: #06b6d4; }
+      .gateway { fill: #fff7ed; stroke: #f59e0b; }
+      .backend { fill: #f8fafc; stroke: #64748b; }
+      .data { fill: #ecfdf5; stroke: #22c55e; }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <text x="70" y="70" class="title">网上书城系统总体架构图</text>
+  <text x="70" y="104" class="small">适用于论文“系统设计”章节，展示客户端、前端、后端与数据库之间的协作关系</text>
+
+  <rect x="55" y="140" width="1570" height="150" class="group"/>
+  <text x="85" y="175" class="subtitle">访问终端层</text>
+  <rect x="215" y="205" width="380" height="70" class="card client"/>
+  <text x="330" y="248" class="label">普通用户浏览器</text>
+  <text x="610" y="248" class="text">访问首页、图书详情、购物车、订单页面</text>
+  <rect x="1085" y="205" width="380" height="70" class="card client"/>
+  <text x="1200" y="248" class="label">管理员浏览器</text>
+  <text x="1480" y="248" class="text">访问管理后台、书籍管理、订单管理</text>
+
+  <rect x="55" y="330" width="1570" height="270" class="group"/>
+  <text x="85" y="365" class="subtitle">前端应用层（React + Vite）</text>
+  <rect x="105" y="415" width="330" height="120" class="card frontend"/>
+  <text x="190" y="475" class="label">页面层 Pages</text>
+  <text x="140" y="505" class="text">Home / BookList / BookDetail / Cart / Checkout / Orders / Admin</text>
+
+  <rect x="490" y="415" width="310" height="120" class="card frontend"/>
+  <text x="565" y="475" class="label">组件层 Components</text>
+  <text x="540" y="505" class="text">Navbar / BookCard / Footer / Admin 弹窗表单 / UI 原子组件</text>
+
+  <rect x="855" y="415" width="310" height="120" class="card frontend"/>
+  <text x="915" y="475" class="label">状态与数据层</text>
+  <text x="900" y="505" class="text">TanStack Query / React Hook Form / Context / 自定义 Hooks</text>
+
+  <rect x="1220" y="415" width="330" height="120" class="card frontend"/>
+  <text x="1305" y="475" class="label">路由与会话层</text>
+  <text x="1265" y="505" class="text">Wouter 客户端路由 / Cookie 会话识别 / 权限页面守卫</text>
+
+  <rect x="555" y="555" width="560" height="70" class="card gateway"/>
+  <text x="730" y="598" class="label">tRPC Client + HTTP 请求 + Cookie 透传</text>
+
+  <rect x="55" y="665" width="1570" height="260" class="group"/>
+  <text x="85" y="700" class="subtitle">服务端应用层（Node.js + Express + tRPC）</text>
+  <rect x="105" y="750" width="280" height="115" class="card backend"/>
+  <text x="185" y="808" class="label">Express Server</text>
+  <text x="150" y="838" class="text">注册中间件、挂载 /trpc、输出静态资源</text>
+
+  <rect x="430" y="750" width="300" height="115" class="card backend"/>
+  <text x="505" y="808" class="label">鉴权与上下文</text>
+  <text x="465" y="838" class="text">Cookie 解析、JWT 校验、adminProcedure / protectedProcedure</text>
+
+  <rect x="775" y="750" width="300" height="115" class="card backend"/>
+  <text x="850" y="808" class="label">tRPC Router</text>
+  <text x="815" y="838" class="text">book / category / cart / order / user / system 过程定义</text>
+
+  <rect x="1120" y="750" width="385" height="115" class="card backend"/>
+  <text x="1240" y="808" class="label">业务与事务处理</text>
+  <text x="1165" y="838" class="text">库存校验、订单创建、状态流转、异常回滚、后台 CRUD 逻辑</text>
+
+  <rect x="365" y="955" width="950" height="90" class="card data"/>
+  <text x="730" y="1007" class="label">数据访问层：Drizzle ORM + MySQL</text>
+  <text x="470" y="1035" class="text">核心数据表：users、categories、books、cart_items、orders、order_items</text>
+
+  <line x1="405" y1="275" x2="270" y2="415" class="arrow"/>
+  <line x1="1275" y1="275" x2="1385" y2="415" class="arrow"/>
+  <line x1="270" y1="535" x2="835" y2="590" class="arrow"/>
+  <line x1="645" y1="535" x2="835" y2="590" class="arrow"/>
+  <line x1="1010" y1="535" x2="835" y2="590" class="arrow"/>
+  <line x1="1385" y1="535" x2="835" y2="590" class="arrow"/>
+  <line x1="835" y1="625" x2="835" y2="750" class="arrow"/>
+  <line x1="245" y1="865" x2="365" y2="985" class="arrow"/>
+  <line x1="580" y1="865" x2="610" y2="955" class="arrow"/>
+  <line x1="925" y1="865" x2="925" y2="955" class="arrow"/>
+  <line x1="1310" y1="865" x2="1085" y2="955" class="arrow"/>
+</svg>

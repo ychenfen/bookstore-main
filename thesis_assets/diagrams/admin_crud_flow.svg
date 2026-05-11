@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="940" viewBox="0 0 1680 940">
+  <defs>
+    <style>
+      .title { font: 700 30px 'Noto Sans SC', Arial, sans-serif; fill: #102a43; }
+      .subtitle { font: 600 18px 'Noto Sans SC', Arial, sans-serif; fill: #243b53; }
+      .label { font: 600 17px 'Noto Sans SC', Arial, sans-serif; fill: #1f2937; }
+      .text { font: 500 15px 'Noto Sans SC', Arial, sans-serif; fill: #52606d; }
+      .lane { fill: none; stroke: #d9e2ec; stroke-width: 2; stroke-dasharray: 8 8; rx: 28; ry: 28; }
+      .node { fill: #ffffff; stroke: #9fb3c8; stroke-width: 2; rx: 24; ry: 24; }
+      .hub { fill: #fff7ed; stroke: #f97316; }
+      .books { fill: #eff6ff; stroke: #3b82f6; }
+      .categories { fill: #ecfeff; stroke: #06b6d4; }
+      .orders { fill: #f5f3ff; stroke: #8b5cf6; }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .hint { font: 500 13px 'Noto Sans SC', Arial, sans-serif; fill: #7c8a9a; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <text x="72" y="72" class="title">网上书城系统管理员 CRUD 管理流程图</text>
+  <text x="72" y="106" class="hint">适用于论文中的“后台管理设计”或“管理员端功能实现”章节</text>
+
+  <rect x="55" y="140" width="1570" height="740" class="lane"/>
+  <text x="85" y="176" class="subtitle">后台管理总流程</text>
+
+  <rect x="680" y="210" width="320" height="110" class="node hub"/>
+  <text x="760" y="268" class="label">进入管理后台</text>
+  <text x="735" y="296" class="text">查看统计数据、最近订单与功能入口</text>
+
+  <rect x="120" y="420" width="360" height="120" class="node books"/>
+  <text x="210" y="480" class="label">书籍管理模块</text>
+  <text x="170" y="510" class="text">新增图书 / 编辑图书 / 下架或恢复上架 / 删除</text>
+
+  <rect x="660" y="420" width="360" height="120" class="node categories"/>
+  <text x="750" y="480" class="label">分类管理模块</text>
+  <text x="710" y="510" class="text">新增分类 / 编辑分类 / 删除分类 / 维护关联关系</text>
+
+  <rect x="1200" y="420" width="320" height="120" class="node orders"/>
+  <text x="1280" y="480" class="label">订单管理模块</text>
+  <text x="1250" y="510" class="text">查看订单 / 发货 / 完成 / 取消订单</text>
+
+  <line x1="760" y1="320" x2="300" y2="420" class="arrow"/>
+  <line x1="840" y1="320" x2="840" y2="420" class="arrow"/>
+  <line x1="920" y1="320" x2="1360" y2="420" class="arrow"/>
+
+  <rect x="100" y="640" width="400" height="140" class="node books"/>
+  <text x="170" y="700" class="label">书籍 CRUD 闭环</text>
+  <text x="135" y="730" class="text">表单录入后写入数据库，列表立即刷新，支持再次编辑验证结果</text>
+  <text x="135" y="758" class="text">后台可查看 all / active / inactive 状态，便于演示完整增删改查</text>
+
+  <rect x="640" y="640" width="400" height="140" class="node categories"/>
+  <text x="710" y="700" class="label">分类 CRUD 闭环</text>
+  <text x="675" y="730" class="text">支持新增、重命名与删除；删除前会解除相关书籍分类引用</text>
+  <text x="675" y="758" class="text">保证演示时删除分类不会造成数据异常</text>
+
+  <rect x="1180" y="640" width="360" height="140" class="node orders"/>
+  <text x="1245" y="700" class="label">订单状态管理闭环</text>
+  <text x="1215" y="730" class="text">管理员可根据业务阶段更新状态，取消订单时自动回滚库存</text>
+  <text x="1215" y="758" class="text">适合答辩中演示订单生命周期管理</text>
+
+  <line x1="300" y1="540" x2="300" y2="640" class="arrow"/>
+  <line x1="840" y1="540" x2="840" y2="640" class="arrow"/>
+  <line x1="1360" y1="540" x2="1360" y2="640" class="arrow"/>
+</svg>

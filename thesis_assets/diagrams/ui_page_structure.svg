@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <defs>
+    <style>
+      .title { font: 700 30px 'Noto Sans SC', Arial, sans-serif; fill: #14213d; }
+      .subtitle { font: 600 19px 'Noto Sans SC', Arial, sans-serif; fill: #1f2937; }
+      .label { font: 500 17px 'Noto Sans SC', Arial, sans-serif; fill: #334155; }
+      .small { font: 500 14px 'Noto Sans SC', Arial, sans-serif; fill: #475569; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 22; ry: 22; }
+      .user { fill: #eff6ff; stroke: #60a5fa; }
+      .admin { fill: #fff7ed; stroke: #fb923c; }
+      .public { fill: #f8fafc; stroke: #94a3b8; }
+      .arrow { stroke: #64748b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .group { fill: none; stroke: #e2e8f0; stroke-width: 2; stroke-dasharray: 8 6; rx: 28; ry: 28; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <text x="70" y="72" class="title">网上书城系统 UI 页面关系图</text>
+  <text x="70" y="106" class="small">适用于论文中的“系统界面设计”或“前端功能结构”章节</text>
+
+  <rect x="55" y="140" width="1480" height="300" class="group"/>
+  <text x="85" y="175" class="subtitle">公共浏览区域</text>
+  <rect x="105" y="220" width="220" height="92" class="card public"/>
+  <text x="145" y="272" class="subtitle">首页</text>
+  <text x="145" y="300" class="small">轮播推荐 / 分类入口 / 热销榜</text>
+
+  <rect x="395" y="220" width="240" height="92" class="card public"/>
+  <text x="435" y="272" class="subtitle">图书列表页</text>
+  <text x="435" y="300" class="small">搜索 / 分类筛选 / 分页</text>
+
+  <rect x="710" y="220" width="250" height="92" class="card public"/>
+  <text x="750" y="272" class="subtitle">图书详情页</text>
+  <text x="750" y="300" class="small">图书信息 / 数量选择 / 加购</text>
+
+  <line x1="325" y1="266" x2="395" y2="266" class="arrow"/>
+  <line x1="635" y1="266" x2="710" y2="266" class="arrow"/>
+
+  <rect x="55" y="480" width="980" height="420" class="group"/>
+  <text x="85" y="515" class="subtitle">用户端功能区域</text>
+
+  <rect x="110" y="580" width="220" height="92" class="card user"/>
+  <text x="150" y="632" class="subtitle">购物车</text>
+  <text x="150" y="660" class="small">数量调整 / 删除 / 小计</text>
+
+  <rect x="395" y="580" width="240" height="92" class="card user"/>
+  <text x="435" y="632" class="subtitle">结算页</text>
+  <text x="435" y="660" class="small">收货信息 / 订单确认</text>
+
+  <rect x="710" y="580" width="250" height="92" class="card user"/>
+  <text x="750" y="632" class="subtitle">订单列表页</text>
+  <text x="750" y="660" class="small">支付 / 取消 / 查看详情</text>
+
+  <rect x="395" y="760" width="240" height="92" class="card user"/>
+  <text x="435" y="812" class="subtitle">个人中心</text>
+  <text x="435" y="840" class="small">账户信息 / 最近订单 / 快捷入口</text>
+
+  <line x1="835" y1="312" x2="220" y2="580" class="arrow"/>
+  <line x1="330" y1="626" x2="395" y2="626" class="arrow"/>
+  <line x1="635" y1="626" x2="710" y2="626" class="arrow"/>
+  <line x1="515" y1="672" x2="515" y2="760" class="arrow"/>
+
+  <rect x="1085" y="480" width="450" height="420" class="group"/>
+  <text x="1115" y="515" class="subtitle">管理员端功能区域</text>
+
+  <rect x="1140" y="580" width="330" height="92" class="card admin"/>
+  <text x="1180" y="632" class="subtitle">管理后台首页</text>
+  <text x="1180" y="660" class="small">统计卡片 / 最近订单 / 系统概览</text>
+
+  <rect x="1140" y="720" width="150" height="92" class="card admin"/>
+  <text x="1170" y="772" class="subtitle">书籍管理</text>
+  <text x="1170" y="800" class="small">增删改查</text>
+
+  <rect x="1315" y="720" width="150" height="92" class="card admin"/>
+  <text x="1345" y="772" class="subtitle">分类管理</text>
+  <text x="1345" y="800" class="small">增删改查</text>
+
+  <rect x="1228" y="835" width="150" height="92" class="card admin"/>
+  <text x="1258" y="887" class="subtitle">订单管理</text>
+  <text x="1258" y="915" class="small">状态流转</text>
+
+  <line x1="1305" y1="672" x2="1215" y2="720" class="arrow"/>
+  <line x1="1305" y1="672" x2="1390" y2="720" class="arrow"/>
+  <line x1="1305" y1="672" x2="1305" y2="835" class="arrow"/>
+</svg>

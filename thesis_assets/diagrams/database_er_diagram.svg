@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1120" viewBox="0 0 1680 1120">
+  <defs>
+    <style>
+      .title { font: 700 30px 'Noto Sans SC', Arial, sans-serif; fill: #102a43; }
+      .subtitle { font: 600 18px 'Noto Sans SC', Arial, sans-serif; fill: #243b53; }
+      .field { font: 500 15px 'Noto Sans SC', Arial, sans-serif; fill: #334155; }
+      .small { font: 500 13px 'Noto Sans SC', Arial, sans-serif; fill: #7b8794; }
+      .table { fill: #ffffff; stroke: #94a3b8; stroke-width: 2; rx: 20; ry: 20; }
+      .head-user { fill: #eff6ff; stroke: #3b82f6; }
+      .head-book { fill: #ecfeff; stroke: #06b6d4; }
+      .head-order { fill: #fff7ed; stroke: #f59e0b; }
+      .head-core { fill: #ecfdf5; stroke: #22c55e; }
+      .line { stroke: #64748b; stroke-width: 3; fill: none; }
+      .marker { font: 600 16px 'Noto Sans SC', Arial, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <text x="70" y="72" class="title">网上书城系统数据库 E-R 关系图</text>
+  <text x="70" y="106" class="small">适用于论文“数据库设计”章节，展示核心数据表及主外键关系</text>
+
+  <g transform="translate(120,190)">
+    <rect width="320" height="190" class="table head-user"/>
+    <text x="28" y="42" class="subtitle">users</text>
+    <text x="28" y="78" class="field">PK  id</text>
+    <text x="28" y="106" class="field">openId</text>
+    <text x="28" y="134" class="field">name</text>
+    <text x="28" y="162" class="field">email</text>
+    <text x="28" y="190" class="field">role</text>
+  </g>
+
+  <g transform="translate(120,500)">
+    <rect width="320" height="190" class="table head-user"/>
+    <text x="28" y="42" class="subtitle">cart\_items</text>
+    <text x="28" y="78" class="field">PK  id</text>
+    <text x="28" y="106" class="field">FK  userId</text>
+    <text x="28" y="134" class="field">FK  bookId</text>
+    <text x="28" y="162" class="field">quantity</text>
+  </g>
+
+  <g transform="translate(680,130)">
+    <rect width="320" height="190" class="table head-core"/>
+    <text x="28" y="42" class="subtitle">categories</text>
+    <text x="28" y="78" class="field">PK  id</text>
+    <text x="28" y="106" class="field">name</text>
+    <text x="28" y="134" class="field">description</text>
+  </g>
+
+  <g transform="translate(680,420)">
+    <rect width="320" height="230" class="table head-book"/>
+    <text x="28" y="42" class="subtitle">books</text>
+    <text x="28" y="78" class="field">PK  id</text>
+    <text x="28" y="106" class="field">FK  categoryId</text>
+    <text x="28" y="134" class="field">title / author</text>
+    <text x="28" y="162" class="field">price / stock</text>
+    <text x="28" y="190" class="field">salesCount / status</text>
+    <text x="28" y="218" class="field">cover / isbn / publisher</text>
+  </g>
+
+  <g transform="translate(680,770)">
+    <rect width="320" height="220" class="table head-order"/>
+    <text x="28" y="42" class="subtitle">orders</text>
+    <text x="28" y="78" class="field">PK  id</text>
+    <text x="28" y="106" class="field">FK  userId</text>
+    <text x="28" y="134" class="field">totalAmount</text>
+    <text x="28" y="162" class="field">status</text>
+    <text x="28" y="190" class="field">shippingAddress / createdAt</text>
+  </g>
+
+  <g transform="translate(1240,500)">
+    <rect width="320" height="220" class="table head-order"/>
+    <text x="28" y="42" class="subtitle">order\_items</text>
+    <text x="28" y="78" class="field">PK  id</text>
+    <text x="28" y="106" class="field">FK  orderId</text>
+    <text x="28" y="134" class="field">FK  bookId</text>
+    <text x="28" y="162" class="field">quantity</text>
+    <text x="28" y="190" class="field">price</text>
+  </g>
+
+  <path d="M440 595 C560 595, 560 535, 680 535" class="line"/>
+  <text x="535" y="575" class="marker">N:1</text>
+
+  <path d="M280 380 C280 440, 280 440, 280 500" class="line"/>
+  <text x="300" y="455" class="marker">1:N</text>
+
+  <path d="M440 595 C560 595, 560 595, 680 595" class="line"/>
+  <text x="535" y="620" class="marker">N:1</text>
+
+  <path d="M280 380 C280 820, 560 880, 680 880" class="line"/>
+  <text x="470" y="840" class="marker">1:N</text>
+
+  <path d="M1000 880 C1120 880, 1120 610, 1240 610" class="line"/>
+  <text x="1115" y="720" class="marker">1:N</text>
+
+  <path d="M1000 535 C1120 535, 1120 610, 1240 610" class="line"/>
+  <text x="1115" y="555" class="marker">1:N</text>
+
+  <path d="M840 320 C840 370, 840 370, 840 420" class="line"/>
+  <text x="860" y="382" class="marker">1:N</text>
+</svg>

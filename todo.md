@@ -1,0 +1,55 @@
+# Project TODO
+
+- [x] Database schema design (books, categories, cart_items, orders, order_items)
+- [x] Seed sample book data
+- [x] Backend: Book listing with pagination
+- [x] Backend: Book search by title/author
+- [x] Backend: Book category filtering
+- [x] Backend: Book detail endpoint
+- [x] Backend: Cart CRUD (add, remove, update quantity)
+- [x] Backend: Order creation and checkout
+- [x] Backend: Order history for user
+- [x] Backend: Admin book management (CRUD)
+- [x] Backend: Admin category management
+- [x] Frontend: Global navigation and layout
+- [x] Frontend: Homepage with featured books
+- [x] Frontend: Book listing page with pagination
+- [x] Frontend: Book search functionality
+- [x] Frontend: Book category filter
+- [x] Frontend: Book detail page
+- [x] Frontend: Shopping cart page
+- [x] Frontend: Checkout and order creation
+- [x] Frontend: Order history page
+- [x] Frontend: Admin dashboard - book management
+- [x] Frontend: Admin dashboard - category management
+- [x] Frontend: Responsive design
+- [x] Frontend: Theme and styling (clean, modern)
+- [x] Vitest unit tests
+- [x] Add cover images for all books
+- [x] Improve client-side book card image display
+- [x] Improve admin panel book image display
+- [x] Check and fix: all page navigation links work
+- [ ] Check and fix: book detail page add-to-cart works
+- [ ] Check and fix: cart quantity update and remove works
+- [ ] Check and fix: checkout and order creation flow works
+- [ ] Check and fix: admin CRUD operations all work
+- [x] Check and fix: admin order status management (ship, complete)
+- [x] Enrich: add more books to cover all categories
+- [x] Enrich: homepage show books with cover images properly
+- [x] Enrich: book detail page show more info (ISBN, publisher, pages)
+- [x] Enrich: user profile page
+- [x] Enrich: footer component
+- [x] Enrich: admin order status update (ship/complete/cancel)
+- [ ] Enrich: book stock validation on checkout
+- [ ] Enrich: empty state improvements across all pages
+- [x] Add simulate payment feature for orders
+- [x] Add "pay now" button for pending orders
+- [x] Enrich admin dashboard stats (recent orders list)
+
+## 本轮补充完成
+
+- [x] Fix: 购物车加购与改数量时增加库存/下架校验
+- [x] Fix: 订单取消时恢复库存和销量，避免库存被错误占用
+- [x] Fix: 后台书籍弹窗在新增/切换编辑对象时正确重置表单
+- [x] Enrich: 购物车、结算页、后台列表补充异常提示与空状态
+- [x] Enrich: 测试在无 DATABASE_URL 环境下也能稳定运行

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <style>
+      .title { font: 700 30px 'Noto Sans SC', Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 600 20px 'Noto Sans SC', Arial, sans-serif; fill: #1e293b; }
+      .text { font: 500 16px 'Noto Sans SC', Arial, sans-serif; fill: #334155; }
+      .card-user { fill: #eff6ff; stroke: #3b82f6; stroke-width: 2; rx: 24; ry: 24; }
+      .card-admin { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 24; ry: 24; }
+      .center { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2.5; rx: 30; ry: 30; }
+      .arrow-blue { stroke: #3b82f6; stroke-width: 3; fill: none; marker-end: url(#blueArrow); }
+      .arrow-orange { stroke: #f97316; stroke-width: 3; fill: none; marker-end: url(#orangeArrow); }
+    </style>
+    <marker id="blueArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/>
+    </marker>
+    <marker id="orangeArrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#f97316"/>
+    </marker>
+  </defs>
+
+  <text x="70" y="78" class="title">网上书城系统角色与功能模块图</text>
+  <text x="70" y="112" class="text">适用于论文中的“系统功能设计”或“角色权限设计”章节</text>
+
+  <rect x="510" y="280" width="380" height="220" class="center"/>
+  <text x="618" y="345" class="subtitle">网上书城系统</text>
+  <text x="580" y="388" class="text">前端：React + Wouter + TanStack Query</text>
+  <text x="580" y="420" class="text">后端：Express + tRPC</text>
+  <text x="580" y="452" class="text">数据层：Drizzle ORM + MySQL</text>
+
+  <rect x="110" y="190" width="280" height="120" class="card-user"/>
+  <text x="150" y="250" class="subtitle">普通用户</text>
+  <text x="150" y="285" class="text">浏览图书 / 搜索筛选 / 查看详情</text>
+
+  <rect x="110" y="370" width="280" height="120" class="card-user"/>
+  <text x="150" y="430" class="subtitle">购物行为</text>
+  <text x="150" y="465" class="text">加入购物车 / 修改数量 / 提交订单</text>
+
+  <rect x="110" y="550" width="280" height="120" class="card-user"/>
+  <text x="150" y="610" class="subtitle">个人中心</text>
+  <text x="150" y="645" class="text">订单列表 / 订单详情 / 模拟支付</text>
+
+  <rect x="1010" y="190" width="280" height="120" class="card-admin"/>
+  <text x="1050" y="250" class="subtitle">管理员</text>
+  <text x="1050" y="285" class="text">系统总览 / 关键统计 / 最近订单</text>
+
+  <rect x="1010" y="370" width="280" height="120" class="card-admin"/>
+  <text x="1050" y="430" class="subtitle">内容管理</text>
+  <text x="1050" y="465" class="text">书籍管理 / 分类管理 / 上下架</text>
+
+  <rect x="1010" y="550" width="280" height="120" class="card-admin"/>
+  <text x="1050" y="610" class="subtitle">订单管理</text>
+  <text x="1050" y="645" class="text">查看订单 / 更新状态 / 发货完成</text>
+
+  <line x1="390" y1="250" x2="510" y2="330" class="arrow-blue"/>
+  <line x1="390" y1="430" x2="510" y2="390" class="arrow-blue"/>
+  <line x1="390" y1="610" x2="510" y2="450" class="arrow-blue"/>
+
+  <line x1="1010" y1="250" x2="890" y2="330" class="arrow-orange"/>
+  <line x1="1010" y1="430" x2="890" y2="390" class="arrow-orange"/>
+  <line x1="1010" y1="610" x2="890" y2="450" class="arrow-orange"/>
+</svg>

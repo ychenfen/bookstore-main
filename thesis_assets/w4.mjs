@@ -1,0 +1,1 @@
+const fs=require("fs");const t="/home/besp/Desktop/bookstore-main/thesis_assets/thesis.tex";
